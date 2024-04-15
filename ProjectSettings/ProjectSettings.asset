@@ -704,11 +704,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 8cf567ff-06c0-4ffa-b529-32adec93f2fa
+  cloudProjectId: 74949d3f-e9e8-491a-bd9d-da8bccd52f97
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: CPSC466-TD
-  organizationId: thestorm0416
+  projectName: Tower Defense
+  organizationId: frank9661
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
