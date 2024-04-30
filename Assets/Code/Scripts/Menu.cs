@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] TextMeshProUGUI currencyUI;
+    [SerializeField] TextMeshProUGUI lifeUI;
     [SerializeField] Animator anim;
 
     private bool isMenuOpen = true;
@@ -19,6 +20,7 @@ public class Menu : MonoBehaviour
     private void OnGUI() 
     {
         currencyUI.text = LevelManager.main.currency.ToString();
+        lifeUI.text = $"Lives: {LevelManager.main.roundLives.ToString()}";
     }
 
     public void SetSelected() {

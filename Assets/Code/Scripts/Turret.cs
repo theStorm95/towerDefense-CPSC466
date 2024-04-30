@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using TMPro;
 
 public class Turret : MonoBehaviour
 {
@@ -13,13 +14,15 @@ public class Turret : MonoBehaviour
     [SerializeField] private Transform firingPoint;
     [SerializeField] private GameObject upgradeUI;
     [SerializeField] private Button upgradeButton;
+    [SerializeField] private Button sellButton;
+    [SerializeField] TextMeshProUGUI turretInfo;
 
     [Header("Attribute")]
     [SerializeField] private float targetingRange = 3f;
     [SerializeField] private float rotationSpeed = 200f;
     [SerializeField] private float bps = 1f; // Bullets per second
     [SerializeField] private int baseUpgradeCost = 100;
-
+    
     private float bpsBase;
     private float targetingRangeBase;
 
@@ -33,6 +36,7 @@ public class Turret : MonoBehaviour
         targetingRangeBase = targetingRange;
 
         upgradeButton.onClick.AddListener(Upgrade);
+        sellButton.onClick.AddListener(Sell);
     }
 
     private void Update() {
@@ -101,8 +105,18 @@ public class Turret : MonoBehaviour
         CloseUpgradeUI();
     }
 
+    public void Sell() {
+        LevelManager.main.IncreaseCurrency(CalculateResell());
+        Destroy(gameObject);
+        CloseUpgradeUI();
+    }
+
     private int CalculateCost() {
         return Mathf.RoundToInt(baseUpgradeCost * Mathf.Pow(level, 0.8f));
+    }
+
+    private int CalculateResell() {
+        return Mathf.RoundToInt(baseUpgradeCost/2 * Mathf.Pow(level, 1.1f));
     }
 
     private float CalculateBPS() {
@@ -113,8 +127,7 @@ public class Turret : MonoBehaviour
         return targetingRangeBase * Mathf.Pow(level, 0.4f);
     }
 
-    private void OnDrawGizmosSelected() {
-        Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+    private void OnGUI() {
+        turretInfo.text = $"Level {level.ToString()}";
     }
 }
