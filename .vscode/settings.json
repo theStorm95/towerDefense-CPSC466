@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "CPSC466-TD.sln"
+    "dotnet.defaultSolution": "towerDefense-CPSC466.sln"
 }
