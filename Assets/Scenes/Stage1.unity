@@ -2486,8 +2486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826839b2aeda45d4f9a285ff7d70d58d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myMixer: {fileID: 24100000, guid: aa29af9ec420acb4bb6dff4e023fe9dc, type: 2}
-  musicSlider: {fileID: 422746548}
 --- !u!1001 &322956035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3979,8 +3977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ce267f7cc4280458ffbe1549ddaecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 2086733238}
-  background: {fileID: 8300000, guid: fc5af015011ea3745b7f78ea1dd1049f, type: 3}
 --- !u!4 &489743315
 Transform:
   m_ObjectHideFlags: 0
@@ -4099,9 +4095,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 1508375052136269496, guid: 6bf44962a1b79f040bb7dab604b66e42, type: 3}
-  - {fileID: 1508375052136269496, guid: 6bf44962a1b79f040bb7dab604b66e42, type: 3}
-  - {fileID: 1508375052136269496, guid: 75ce6138826a46b449da75a1e040eed8, type: 3}
+  - {fileID: 4740227903887920701, guid: cd917417bae7d52489ee97d1b9cd5143, type: 3}
+  - {fileID: 4015396259842961451, guid: bbc637da6c6be5a43b154e372a94f5dd, type: 3}
+  - {fileID: 4901420390091373327, guid: a3d6428119fbff34a9568e4dfd30cb78, type: 3}
   baseEnemies: 8
   enemiesPerSecond: 0.5
   timeBetweenWaves: 5
